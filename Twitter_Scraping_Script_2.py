@@ -9,10 +9,10 @@ connected = False
 ser.close()
 
 #Twitter API credentials
-consumer_key = 'ig0ibb7DWnvdPJOHV1mw6LLCX'
-consumer_secret = 'zPC4whMxcYOABKo1AmAvxr9wI6NHfgVC0468hwU0455Hl3n0q6'
-access_key = '910606208402427904-AoPm9vMaiRPUiwW7xJsmizyzVP8zloL'
-access_secret = 'C3qUYaeYkHSbhxx4nbUQoB1aSuIK8aFjlS8vvPeaqINxa'
+consumer_key = 'YOUR CONSUMER KEY HERE'
+consumer_secret = 'YOUR CONSUMER SECRET HERE'
+access_key = 'YOUR ACCESS KEY HERE'
+access_secret = 'YOUR ACCESS SECRET HERE'
 
 def get_user_tweets(user_name, num_tweets):
     # Open the Serial Connection
@@ -76,17 +76,17 @@ def get_user_tweets(user_name, num_tweets):
                     print(rgb[1])
                     print(rgb[2])
                     
-                    # Prompt for Red value
+                    #Send Red value
                     redVal = rgb[0]
                     print(struct.pack('>B', redVal))
                     ser.write(b"r" + struct.pack('>B',redVal))
 
-                    # Prompt for Green value
+                    #Send Green value
                     greenVal = rgb[1]
                     print(struct.pack('>B', greenVal))
                     ser.write(b"g" + struct.pack('>B',greenVal))
 
-                    # Prompt for Blue value
+                    #Send Blue value
                     blueVal = rgb[2]
                     print(struct.pack('>B', blueVal))
                     ser.write(b"b" + struct.pack('>B',blueVal))
